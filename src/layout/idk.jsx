@@ -33,7 +33,7 @@ const idk = {
                 </div>
                 <div className={`menu-expanded`}>
                 <ul>
-                    <li><a href="#">About Me</a></li>
+                    <li><a href="#AboutMe">About Me</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact</a></li>

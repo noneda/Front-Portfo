@@ -8,6 +8,7 @@ const Home = () => {
             <idk.Menu/>
             <idk.Header/>
             <divs.Presentation/>
+            <divs.AboutMe/>
             <idk.Footer/>
         </>
     )   

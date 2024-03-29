@@ -31,31 +31,54 @@
         }
     }
     .tation {
-        float: left;
+        float: right;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         height: auto;
-        padding-left: 10%;
+        margin-right: 10%;
         width: auto;
         h2 {
             text-align: end;
             margin-top: 50%;
             font-size: 250%;
-            color: $Black;
+            color:  $Text ;
         }
     }
-      
-      
-
 }
 
-
-.AboutMe{
+#AboutMe{
     position: static;
     float: right;
     width: 95%;
     margin: 0% 2.5%;
     background-color: $Second;
     height: auto;
-}
+    align-items: center;
+    justify-content: center;
+    .About{
+        float: right;
+        align-items: center;
+        justify-content: center;
+        height: auto; width: auto;
+        margin-right: 10% ;
+        h3{
+            color: $Fourth;
+            font-size: 500%;   
+        }
+    }
+    .Me {
+        float: left;
+        background-color: $White;
+        height: auto;
+        padding: 2%;
+        border-radius: 22px;
+        width: 33%;
+        margin: 10% 12.5%;
+        p {
+            text-align: center;
+            font-size: 150%;
+            color:  $Text ;
+        }
+    }
+}      

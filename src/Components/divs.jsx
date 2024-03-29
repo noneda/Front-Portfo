@@ -16,9 +16,16 @@ const divs = {
     AboutMe : () => {
         return (
             <>
-                <div className="AboutMe">
-                    <div className="Text">
-                        
+                <div id="AboutMe">
+                    <div className="About">
+                        <h3>
+                            About Me
+                        </h3>
+                    </div>
+                    <div className="Me">
+                         <p>
+                         I am a student passionate about programming who wants to learn new skills and develop even more the ones I already have. I like to give 100% in any activity. And I am a Disciplined, Dedicated and committed young man.
+                         </p>
                     </div>
                 </div>
             </>
