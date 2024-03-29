@@ -1,0 +1,11 @@
+@use './Components/Divs.scss';
+@use './Components/IDK.scss';
+@import './Data/Colors.scss' , './Data/Others.scss';
+
+
+
+body {
+    background-color : $White   ;
+    font-family: $Truculenta;
+}
+
