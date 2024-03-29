@@ -32,10 +32,12 @@ nav{
     }
     .change .first-line {
         transform: rotate(45deg) translate(0px, 0px);  
+        background: $White;
     }
     
     .change .second-line {
         transform: rotate(-45deg) translate(0px, 0px);
+        background: $White;
     }
     
     .change ~ .menu-expanded   {
@@ -45,7 +47,7 @@ nav{
 
     
     .menu-expanded {
-    background: $Third;
+    background: $Black;
     max-width: 0px;
     opacity: 0;
     height: 100%;
