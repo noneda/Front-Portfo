@@ -8,7 +8,7 @@ import Home from '../Pages/home'
 
 const Router = createBrowserRouter([
     {
-        path:"/",
+        path:"/Portafo",
         element : <Home/>,
 /*
         errorElement: <h1>ERROR</h1>,
