@@ -34,7 +34,14 @@ const divs = {
     Skill : () => {
         return (
             <>
-            
+            <divs id="Skills">
+                <div className="left">
+
+                </div>
+                <divs className="right">
+
+                </divs>
+            </divs>
             </>
         )
     },

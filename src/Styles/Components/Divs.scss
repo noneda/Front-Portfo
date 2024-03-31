@@ -73,7 +73,7 @@
         height: auto;
         padding: 2%;
         border-radius: 22px;
-        width: 33%;
+        width: 40%;
         margin: 10% 12.5%;
         p {
             text-align: center;
@@ -82,3 +82,40 @@
         }
     }
 }      
+
+
+#Skills{
+    position: static;
+    float: right;
+    width: 95%;
+    margin: 0% 2.5%;
+    background-color: $Fourth;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    .right{
+        float: right;
+        align-items: center;
+        justify-content: center;
+        height: auto; width: auto;
+        margin-right: 10% ;
+        h3{
+            color: $Fourth;
+            font-size: 500%;   
+        }
+    }
+    .left{
+        float: left;
+        background-color: $White;
+        height: auto;
+        padding: 2%;
+        border-radius: 22px;
+        width: 40%;
+        margin: 10% 12.5%;
+        p {
+            text-align: center;
+            font-size: 150%;
+            color:  $Text ;
+        }
+    }
+}
