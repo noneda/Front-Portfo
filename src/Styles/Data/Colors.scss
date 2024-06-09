@@ -1,12 +1,41 @@
-$First  : #F5F7F8;
-$Second : #F4CE14;
-$Third  : #495E57;
-$Fourth : #45474B;
+:root{
+    --First  : #F5F7F8;
+    --Second : #F4CE14;
+    --Third  : #495E57;
+    --Fourth : #45474B;
 
 
-$Black  : #393E46;
+    --Black  : #393E46;
+    --GrayL  : #606470;
+    --GrayD  : #535962;
+    --White  : #ECECEC;
+
+    --Text   : #1c2833 
+}
+.dark:root{
+    --First  : #222831;
+    --Second : #31363F;
+    --Third  : #76ABAE;
+    --Fourth : #EEEEEE;
+
+
+    --Black  : #c6c1b9;
+    --GrayL  : #606470;
+    --GrayD  : #606470;
+    --White  : #131313;
+
+    --Text   : #e3d7cc 
+}
+
+$First  : #222831;
+$Second : #31363F;
+$Third  : #76ABAE;
+$Fourth : #EEEEEE;
+
+
+$Black  : #c6c1b9;
 $GrayL  : #606470;
-$GrayD  : #535962;
-$White  : #ECECEC;
+$GrayD  : #606470;
+$White  : #131313;
 
-$Text   : #1c2833 
+$Text   : #e3d7cc;
