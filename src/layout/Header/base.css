@@ -1,0 +1,95 @@
+header {
+    width: 100%;
+    height: 66vh;
+    background-color: var(--Palette-One);
+
+    display: flex;
+    justify-content: start;
+    flex-flow: column wrap;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header .title {
+    width: 66%;
+    display: flex;
+    flex-flow: column wrap;
+
+    justify-content: baseline;
+    align-items: center;
+
+}
+
+header .title h1 {
+    color: snow;
+    font-size: 100px;
+    text-align: left;
+    padding: 3rem;
+}
+
+header .title h1 b {
+    font-size: 200px;
+    font-weight: normal;
+    color: var(--Palette-Thi);
+    text-shadow: var(--Palette-Thi) 1px 1px 20px;
+    text-align: start;
+}
+
+header .title h1 p {
+    text-align: right;
+    padding-right: 30px;
+}
+
+header .Subtitle {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    overflow: auto;
+    scrollbar-width: none;
+
+    text-align: center;
+    width: 33%;
+    height: 100%;
+}
+
+
+
+header .Subtitle p {
+    color: snow;
+    overflow: auto;
+    scrollbar-width: none;
+    width: auto;
+    height: auto;
+}
+
+header .Subtitle picture img {
+    border-radius: 50%;
+    width: 400px;
+}
+
+
+@media screen and (max-width: 960px) {
+    header {
+        height: auto;
+        flex-flow: row wrap;
+    }
+
+    header .title {
+        width: 100%;
+    }
+
+    header .Subtitle {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    header .Subtitle p {
+        align-self: center;
+        text-align: center;
+        width: 500px;
+    }
+}

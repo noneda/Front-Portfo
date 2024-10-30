@@ -1,7 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 
 import Header from "./Header";
-import Menu from "./Menu";
+import Nav from "./Nav";
 import Footer from "./Footer";
 import Loader from "../Components/Loader";
 
@@ -14,9 +14,11 @@ const Layout = () => {
   return (
     <>
       <Header></Header>
-      <Menu></Menu>
-      {isLoading ? <Outlet /> : <Loader />}
+      {/*
+      <Nav></Nav>
+      <div className="main">{isLoading ? <Outlet /> : <Loader />}</div>
       <Footer></Footer>
+      */}
     </>
   );
 };

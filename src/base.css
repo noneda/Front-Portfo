@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Delius&family=Modak&family=Tiny5&display=swap');
+
+.tiny5-regular {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modak-regular {
+    font-family: "Modak", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.delius-regular {
+    font-family: "Delius", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.barrio-regular {
+    font-family: "Barrio", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --BodyColor: #F5EFFF;
+    --RootColor: #B9B4C71F;
+    --SectionColor: #F5EFFF;
+
+    --FontColor: #222831;
+    --IconColor: #282A36;
+
+    --Palette-One: #222831;
+    --Palette-Sec: #31363F;
+    --Palette-Thi: #76ABAE;
+    --Palette-Fou: #EEEEEE;
+}
+
+.dark {
+    --BodyColor: #352F44;
+    --RootColor: #B9B4C71F;
+    --SectionColor: #B9B4C72A;
+
+    --FontColor: #FAF0E6;
+    --IconColor: #FAF0E6;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    color: var(--FontColor);
+
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--BodyColor);
+    transition: background-color 0.8s;
+}
+
+#root {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: start;
+
+    height: 100vh;
+    width: 80%;
+    border-radius: 22px;
+
+    background-color: var(--RootColor);
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.main {
+    width: auto;
+    padding: 1rem;
+    background-color: var(--SectionColor);
+    flex: 1;
+}
+
+
+@media screen and (max-width : 960px) {
+    #root {
+        width: 100%;
+        border-radius: 0px;
+    }
+}
