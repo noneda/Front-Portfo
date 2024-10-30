@@ -31,8 +31,8 @@ header .title h1 {
 header .title h1 b {
     font-size: 200px;
     font-weight: normal;
-    color: var(--Palette-Thi);
-    text-shadow: var(--Palette-Thi) 1px 1px 20px;
+    color: var(--Palette-Fou);
+    text-shadow: var(--Palette-Thi) 1px 1px 10px;
     text-align: start;
 }
 
