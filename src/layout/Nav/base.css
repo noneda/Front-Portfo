@@ -1,5 +1,34 @@
 nav {
-    padding: 1rem;
+    color: #eaf2f8;
     width: 100%;
-    background-color: var(--Palette-Fou);
+    height: 10vh;
+    background-color: var(--Palette-Thi);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
+
+nav ul {
+    padding: 0;
+    margin: 1rem;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+}
+
+nav ul li {
+    padding: 1rem 2rem;
+    list-style: none;
+    font-style: oblique;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-shadow: var(--Palette-One) 1px 1px 10px;
+}
+
+@media screen and(max-width: 960px) {}

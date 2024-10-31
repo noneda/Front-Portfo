@@ -1,5 +1,12 @@
 footer {
-    padding: 1rem;
     width: 100%;
-    background-color: var(--Palette-Thi);
+    background-color: var(--Palette-Fou);
+    display: flex;
+    justify-content: center;
+}
+
+footer h2 {
+    font-weight: 200;
+    font-style: normal;
+    font-size: larger;
 }
