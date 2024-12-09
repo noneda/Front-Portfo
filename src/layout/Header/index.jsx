@@ -11,7 +11,7 @@ const Header = () => {
         </div>
         <div className="Subtitle">
           <picture className="Profile">
-            <img src="/src/assets/ewrwfsgaghaha.jpeg" alt="a" />
+            <img src="/ewrwfsgaghaha.jpeg" alt="a" />
           </picture>
           <h4 className="delius-regular">
             <p>
