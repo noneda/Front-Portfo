@@ -58,11 +58,14 @@ header .Subtitle {
 
 
 header .Subtitle p {
-    color: snow;
+    color: #eaf2f8;
     overflow: auto;
+    font-size: small;
+    font-weight: 100;
     scrollbar-width: none;
     width: auto;
     height: auto;
+    padding: 1rem;
 }
 
 header .Subtitle picture img {
@@ -90,6 +93,7 @@ header .Subtitle picture img {
     header .Subtitle p {
         align-self: center;
         text-align: center;
-        width: 500px;
+        width: 600px;
+
     }
 }

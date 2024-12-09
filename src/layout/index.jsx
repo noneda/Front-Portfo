@@ -14,12 +14,12 @@ const Layout = () => {
   return (
     <>
       <Header></Header>
-      {/*
       <Nav></Nav>
+      {/*
       <div className="main">{isLoading ? <Outlet /> : <Loader />}</div>
-      <Footer></Footer>
       */}
-    </>
+      <Footer></Footer>
+      </>
   );
 };
 
