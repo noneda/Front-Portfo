@@ -7,19 +7,19 @@ import Layout from "../layout";
 import Error from "../Components/Error";
 
 // * Pages
-import Home from "../App/Home";
+import About from "../App/About";
 
 // todo: ROUTER LOCATIONS HERE...
 
-const Router = createBrowserRouter([
+let Router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    errorElement: <Error />,
+    Component: Layout,
+    errorElement: Error,
     children: [
       {
         index: true,
-        element: <Home />,
+        Component: About,
       },
     ],
   },

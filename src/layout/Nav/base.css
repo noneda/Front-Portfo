@@ -2,8 +2,7 @@ nav {
     color: #eaf2f8;
     width: 100%;
     height: 10vh;
-    background-color: var(--Palette-Thi);
-
+    background-color: var(--Palette-Thi);   
     display: flex;
     align-items: center;
     justify-content: center;

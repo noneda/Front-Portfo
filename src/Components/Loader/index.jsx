@@ -1,5 +1,5 @@
 import "./base.css";
 
-const Loader = () => <></>;
+const Loader = () => <div className="loader"></div>;
 
 export default Loader;

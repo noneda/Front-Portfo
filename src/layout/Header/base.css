@@ -3,6 +3,7 @@ header {
     height: 66vh;
     background-color: var(--Palette-One);
 
+    position: sticky;
     display: flex;
     justify-content: start;
     flex-flow: column wrap;
@@ -67,6 +68,7 @@ header .Subtitle p {
     width: 50%;
     height: auto;
     padding: 1rem;
+    text-overflow: ellipsis;
 
 }
 
@@ -97,5 +99,107 @@ header .Subtitle picture img {
         text-align: center;
         width: 600px;
 
+    }
+}
+
+.little {
+    width: 100%;
+    height: auto;
+    background-color: var(--Palette-One);
+
+    display: flex;
+    justify-content: start;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.little .title {
+    width: 45%;
+    height: auto;
+
+}
+
+.little .title h1 {
+    color: snow;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.little .title h1 b {
+    font-size: 75px;
+    font-weight: normal;
+    color: var(--Palette-Fou);
+    text-shadow: var(--Palette-Thi) 1px 1px 10px;
+    text-align: start;
+    margin: 0;
+}
+
+.little .title h1 p {
+    font-size: 25px;
+    margin: 0;
+}
+
+.little .Subtitle {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+}
+
+
+.little .Subtitle p {
+    display: none;
+    visibility: hidden;
+}
+
+.little .Subtitle picture img {
+    border-radius: 50%;
+    width: 125px;
+}
+
+
+@media screen and (max-width: 960px) {
+    .little {
+        height: auto;
+        padding: 10px 0;
+        justify-content: space-around;
+    }
+
+    .little .title {
+        width: 33%;
+    }
+
+    .little .title h1 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+
+    }
+
+    .little .title h1 b {
+        font-size: 45px;
+        margin: 0;
+    }
+
+    .little .title h1 p {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .little .Subtitle {
+        width: 33%;
+    }
+
+    .little .Subtitle picture img {
+        border-radius: 50%;
+        width: 100px;
     }
 }

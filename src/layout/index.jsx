@@ -8,18 +8,19 @@ import Loader from "../Components/Loader";
 // * Export ... Views? O don´t know how name those
 
 const Layout = () => {
+  /* 
   const location = useLocation();
   const isLoading = location.state?.loading;
-
+  */
   return (
     <>
       <Header></Header>
       <Nav></Nav>
-      {/*
-      <div className="main">{isLoading ? <Outlet /> : <Loader />}</div>
-      */}
+      {/*isLoading ? <Outlet /> : <Loader />*/}
+      <Outlet />
+
       <Footer></Footer>
-      </>
+    </>
   );
 };
 

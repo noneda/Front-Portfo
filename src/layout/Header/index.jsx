@@ -1,6 +1,20 @@
 import "./base.css";
+import _ from "lodash";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  let animateHeader = _.throttle(() => {
+    let scrollPosition = Math.ceil(window.scrollY);
+    if (scrollPosition > 5) {
+      document.querySelector("header").classList.add("little");
+    } else {
+      document.querySelector("header").classList.remove("little");
+    }
+  }, 300);
+  useEffect(() => {
+    window.addEventListener("scroll", animateHeader);
+  }, []);
+
   return (
     <>
       <header>
