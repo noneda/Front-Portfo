@@ -7,29 +7,31 @@ header {
     justify-content: start;
     flex-flow: column wrap;
 
+    justify-content: center;
+    align-items: center;
+
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 header .title {
-    width: 66%;
+    width: 55%;
+    height: auto;
     display: flex;
     flex-flow: column wrap;
 
-    justify-content: baseline;
-    align-items: center;
-
+    justify-content: space-between;
+    align-items: last baseline;
 }
 
 header .title h1 {
     color: snow;
-    font-size: 100px;
     text-align: left;
     padding: 3rem;
 }
 
 header .title h1 b {
-    font-size: 200px;
+    font-size: 150px;
     font-weight: normal;
     color: var(--Palette-Fou);
     text-shadow: var(--Palette-Thi) 1px 1px 10px;
@@ -37,6 +39,7 @@ header .title h1 b {
 }
 
 header .title h1 p {
+    font-size: 50px;
     text-align: right;
     padding-right: 30px;
 }
@@ -47,30 +50,29 @@ header .Subtitle {
     align-items: center;
     justify-content: center;
 
-    overflow: auto;
-    scrollbar-width: none;
-
-    text-align: center;
-    width: 33%;
-    height: 100%;
+    text-align: justify;
+    width: 45%;
+    height: auto;
 }
 
 
 
 header .Subtitle p {
     color: #eaf2f8;
-    overflow: auto;
     font-size: small;
     font-weight: 100;
     scrollbar-width: none;
-    width: auto;
+    text-align: center;
+    text-wrap: auto;
+    width: 50%;
     height: auto;
     padding: 1rem;
+
 }
 
 header .Subtitle picture img {
     border-radius: 50%;
-    width: 400px;
+    width: 300px;
 }
 
 
