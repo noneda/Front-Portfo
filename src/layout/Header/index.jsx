@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const Header = () => {
   let animateHeader = _.throttle(() => {
     let scrollPosition = Math.ceil(window.scrollY);
-    if (scrollPosition > 5) {
+    if (scrollPosition > 20) {
       document.querySelector("header").classList.add("little");
       document.querySelector("nav").classList.add("nav-minus  ");
     } else {

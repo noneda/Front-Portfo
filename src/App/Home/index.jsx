@@ -1,6 +1,6 @@
 import "./base.css";
 
-const About = () => {
+const Home = () => {
   return (
     <>
       <div className="Home"></div>
@@ -8,4 +8,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;

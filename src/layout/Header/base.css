@@ -4,11 +4,12 @@ header {
     background-color: var(--Palette-One);
 
     position: sticky;
+    top: 0 !important;
+
     display: flex;
     justify-content: start;
     flex-flow: row wrap;
 
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -105,6 +106,8 @@ header .Subtitle picture img {
     width: 100%;
     height: auto;
     background-color: var(--Palette-One);
+    position: sticky;
+    top: 0 !important;
 
     display: flex;
     justify-content: start;
