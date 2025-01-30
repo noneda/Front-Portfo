@@ -1,4 +1,5 @@
 import "./base.css";
+import Nav from "./Nav";
 import _ from "lodash";
 import { useState, useEffect } from "react";
 
@@ -7,8 +8,10 @@ const Header = () => {
     let scrollPosition = Math.ceil(window.scrollY);
     if (scrollPosition > 5) {
       document.querySelector("header").classList.add("little");
+      document.querySelector("nav").classList.add("nav-minus  ");
     } else {
       document.querySelector("header").classList.remove("little");
+      document.querySelector("nav").classList.remove("nav-minus");
     }
   }, 300);
   useEffect(() => {
@@ -37,6 +40,7 @@ const Header = () => {
             proactive and solution-oriented mindset.
           </p>
         </div>
+        <Nav></Nav>
       </header>
     </>
   );

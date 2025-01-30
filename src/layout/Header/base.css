@@ -6,13 +6,12 @@ header {
     position: sticky;
     display: flex;
     justify-content: start;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
 
-    justify-content: center;
-    align-items: center;
-
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 header .title {
@@ -21,8 +20,8 @@ header .title {
     display: flex;
     flex-flow: column wrap;
 
-    justify-content: space-between;
-    align-items: last baseline;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header .title h1 {
@@ -167,7 +166,6 @@ header .Subtitle picture img {
 @media screen and (max-width: 960px) {
     .little {
         height: auto;
-        padding: 10px 0;
         justify-content: space-around;
     }
 
