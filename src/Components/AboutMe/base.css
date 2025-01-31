@@ -1,22 +1,75 @@
 .AboutMe {
+
+	--Color-One: #243642;
+	--Color-Two: #387478;
+	--Color-Thr: #629584;
+	--Color-Fou: #E2F1E7;
+
 	display: grid;
 	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 	background-color: var(--Palette-Sec);
 	width: 100%;
-	height: 100vh;
+	height: 75vh;
+}
+
+.AboutMe .text {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 0 5%;
+}
+
+.AboutMe .text h3 {
+	color: var(--Color-One);
+	font-size: 45px;
+}
+
+.AboutMe .text p {
+	color: #27374D;
+	font-size: 20px;
 }
 
 .MakesYouDifferent {
 	grid-area: 1/1/3/3;
-	background-color: blue;
+	background-color: var(--Color-Two);
 }
 
 .YouProveIt {
 	grid-area: 1/4/4/3;
-	background-color: red;
+	background-color: var(--Color-Thr);
 }
 
 .WantToAchieve {
 	grid-area: 4/1/3/3;
-	background-color: yellow;
+	background-color: var(--Color-Fou);
+}
+
+
+@media screen and (max-width: 960px) {
+	.AboutMe {
+		display: flex;
+		flex-flow: column wrap;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.AboutMe .text {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 0 1.5%;
+	}
+
+	.AboutMe .text h3 {
+		color: var(--Color-One);
+		font-size: 33px;
+	}
+
+	.AboutMe .text p {
+		color: #27374D;
+		font-size: 22px;
+	}
 }
