@@ -2,7 +2,7 @@ header {
     width: 100%;
     height: 66vh;
     background-color: var(--Palette-One);
-
+    z-index: 2;
     position: sticky;
     top: 0 !important;
 

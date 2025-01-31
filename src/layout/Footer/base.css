@@ -3,6 +3,7 @@ footer {
     background-color: var(--Palette-Fou);
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 footer h2 {

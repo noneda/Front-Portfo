@@ -18,7 +18,31 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 5%;
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* Default state */
+.AboutMe .text {
+	transform: scale(0.5);
+}
+
+/* When hovering over a .text, make it bigger */
+.AboutMe .text:hover {
+	transform: scale(1.1);
+	padding: 0 10%;
+	z-index: 2;
+}
+
+.AboutMe .text:hover h3 {
+	font-size: 50px;
+}
+
+/* Reduce size of other elements when one is hovered */
+.AboutMe .text:not(:hover) {
+	transform: scale(1);
+	opacity: 0.7;
+}
+
 
 .AboutMe .text h3 {
 	color: var(--Color-One);
@@ -61,6 +85,8 @@
 		align-items: center;
 		justify-content: center;
 		padding: 0 1.5%;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+
 	}
 
 	.AboutMe .text h3 {
@@ -72,4 +98,14 @@
 		color: #27374D;
 		font-size: 22px;
 	}
+
+	.AboutMe .text:hover {
+		transform: scale(1.05);
+	}
+
+	.AboutMe .text:not(:hover) {
+		transform: scale(1);
+		opacity: 0.8;
+	}
+
 }
