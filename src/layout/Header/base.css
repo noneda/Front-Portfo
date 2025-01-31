@@ -77,31 +77,6 @@ header .Subtitle picture img {
     width: 300px;
 }
 
-
-@media screen and (max-width: 960px) {
-    header {
-        height: auto;
-        flex-flow: row wrap;
-    }
-
-    header .title {
-        width: 100%;
-    }
-
-    header .Subtitle {
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
-    header .Subtitle p {
-        align-self: center;
-        text-align: center;
-        width: 600px;
-
-    }
-}
-
 .little {
     width: 100%;
     height: auto;
@@ -165,8 +140,29 @@ header .Subtitle picture img {
     width: 125px;
 }
 
-
 @media screen and (max-width: 960px) {
+    header {
+        height: auto;
+        flex-flow: row wrap;
+    }
+
+    header .title {
+        width: 100%;
+    }
+
+    header .Subtitle {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    header .Subtitle p {
+        align-self: center;
+        text-align: center;
+        width: 600px;
+
+    }
+
     .little {
         height: auto;
         justify-content: space-around;
@@ -192,6 +188,89 @@ header .Subtitle picture img {
 
     .little .title h1 p {
         font-size: 25px;
+        margin: 0;
+    }
+
+    .little .Subtitle {
+        width: 33%;
+    }
+
+    .little .Subtitle picture img {
+        border-radius: 50%;
+        width: 100px;
+    }
+}
+
+
+@media screen and (max-width: 412px) {
+    header {
+        height: 90vh;
+        width: 100%;
+        flex-flow: row wrap;
+        align-content: space-evenly;
+    }
+
+    header .title {
+        width: 100%;
+    }
+
+    header .title h1 {
+        padding: 20px 0;
+    }
+
+    header .title h1 b {
+        font-size: 50px;
+    }
+
+    header .title h1 p {
+        font-size: 25px;
+        text-align: end;
+        padding: 0;
+    }
+
+    header .Subtitle {
+        flex-flow: column wrap;
+    }
+
+    header .Subtitle p {
+        font-size: smaller;
+        font-weight: 40;
+        width: 50%;
+        height: auto;
+        padding: 0.25rem;
+
+    }
+
+    header .Subtitle picture img {
+        border-radius: 50%;
+        width: 200px;
+    }
+
+    .little {
+        height: auto;
+        justify-content: space-around;
+    }
+
+    .little .title {
+        width: 33%;
+        padding: 20px 0;
+    }
+
+    .little .title h1 {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: left;
+        align-items: center;
+        margin: 0;
+    }
+
+    .little .title h1 b {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .little .title h1 p {
+        font-size: 20px;
         margin: 0;
     }
 

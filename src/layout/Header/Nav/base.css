@@ -28,6 +28,12 @@ nav ul li:hover {
     text-shadow: var(--Palette-One) 1px 1px 10px;
 }
 
+@media screen and (max-width: 412px) {
+    nav {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 960px) {
     nav {
         width: 100%;

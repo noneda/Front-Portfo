@@ -30,7 +30,7 @@
 .AboutMe .text:hover {
 	transform: scale(1.1);
 	padding: 0 10%;
-	z-index: 2;
+	z-index: 3;
 }
 
 .AboutMe .text:hover h3 {
@@ -106,6 +106,43 @@
 	.AboutMe .text:not(:hover) {
 		transform: scale(1);
 		opacity: 0.8;
+	}
+
+}
+
+@media screen and (max-width: 412px) {
+	.AboutMe {
+		width: 100%;
+	}
+
+	.AboutMe .text {
+		height: auto;
+	}
+
+	.AboutMe .text h3 {
+		font-size: 27px;
+	}
+
+	.AboutMe .text p {
+		font-size: 22px;
+	}
+
+	.AboutMe .text:hover {
+		transform: scale(1.09);
+	}
+
+	.AboutMe .text:not(:hover) {
+		transform: scale(0.9999);
+		opacity: 0.8;
+	}
+
+	.AboutMe .text:hover h3 {
+		color: var(--Color-One);
+		font-size: 30px;
+	}
+
+	.AboutMe .text:hover p {
+		font-size: 22px;
 	}
 
 }
