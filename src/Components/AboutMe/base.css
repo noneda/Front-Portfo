@@ -128,7 +128,7 @@
 	}
 
 	.AboutMe .text:hover {
-		transform: scale(1.09);
+		transform: scale(1);
 	}
 
 	.AboutMe .text:not(:hover) {
