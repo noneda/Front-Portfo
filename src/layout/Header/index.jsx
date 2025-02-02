@@ -1,17 +1,14 @@
 import "./base.css";
-import Nav from "./Nav";
 import _ from "lodash";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Header = () => {
   let animateHeader = _.throttle(() => {
     let scrollPosition = Math.ceil(window.scrollY);
     if (scrollPosition > 5) {
       document.querySelector("header").classList.add("little");
-      document.querySelector("nav").classList.add("nav-minus  ");
     } else {
       document.querySelector("header").classList.remove("little");
-      document.querySelector("nav").classList.remove("nav-minus");
     }
   }, 300);
   useEffect(() => {
@@ -31,16 +28,14 @@ const Header = () => {
             <img src="/ewrwfsgaghaha.jpeg" alt="a" />
           </picture>
           <p className="delius-regular">
-            I am a Software Engineering student with a strong passion for web
-            development and a solid commitment to continuous learning. I am
-            looking for an opportunity to do my internship in a professional
-            environment where I can apply and expand my technical knowledge,
-            contributing with my skills and desire to learn. I am motivated to
-            take on challenges and quickly adapt to new technologies, bringing a
-            proactive and solution-oriented mindset.
+            💻 <b>Software Engineering Student</b> | 🚀 Passion for Web
+            Development | 📚 Continuous Learner Looking for an <b>internship</b>{" "}
+            where I can <b>apply & expand</b> my skills in a professional
+            environment. Enthusiastic about <b>new challenges</b> and{" "}
+            <b>adapting to emerging technologies</b>, always bringing a
+            <b>proactive & solution-driven</b> mindset. ⚡
           </p>
         </div>
-        <Nav></Nav>
       </header>
     </>
   );

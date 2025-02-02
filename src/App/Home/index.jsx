@@ -1,11 +1,7 @@
 import "./base.css";
 
 const Home = () => {
-  return (
-    <>
-      <div className="Home"></div>
-    </>
-  );
+  return <></>;
 };
 
 export default Home;
