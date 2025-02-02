@@ -47,29 +47,16 @@
     --IconColor: #FAF0E6;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body::-webkit-scrollbar {
+    display: none;
+}
 
+body {
     background-color: var(--BodyColor);
-    color: var(--FontColor);
     margin: 0;
+    padding: 0;
 }
 
 #root {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: start;
-
-
-    width: 100%;
     background-color: var(--RootColor);
-}
-
-.main {
-    width: auto;
-    background-color: var(--SectionColor);
-    flex: 1;
 }

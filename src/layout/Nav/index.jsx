@@ -3,8 +3,8 @@ import "./base.css";
 const Nav = () => {
   return (
     <>
-      <nav className="barrio-regular">
-        <ul>
+      <nav>
+        <ul className="barrio-regular">
           <li>About Me</li>
           <li>Work Experience</li>
           <li>Projects</li>

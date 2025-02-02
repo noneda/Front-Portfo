@@ -8,16 +8,13 @@ import Nav from "./Nav";
 // * Export ... Views? O don´t know how name those
 
 const Layout = () => {
-  /* 
   const location = useLocation();
   const isLoading = location.state?.loading;
-  */
   return (
     <>
       <Header></Header>
-      {/*isLoading ? <Outlet /> : <Loader />*/}
-      <Outlet />
       <Nav></Nav>
+      {isLoading ? <Loader /> : <Outlet />}
       <Footer></Footer>
     </>
   );

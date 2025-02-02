@@ -7,9 +7,8 @@ import Layout from "../layout";
 import Error from "../Components/Error";
 
 // * Pages
-import AboutMe from "../Components/AboutMe";
 
-import Home from "../App/Home";
+import App from "../App";
 
 // todo: ROUTER LOCATIONS HERE...
 
@@ -21,7 +20,7 @@ let Router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home,
+        Component: App,
       },
     ],
   },
