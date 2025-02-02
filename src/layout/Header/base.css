@@ -231,7 +231,7 @@ header .Subtitle picture img {
 }
 
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 430px) {
     header {
         height: 90vh;
         width: 100%;
