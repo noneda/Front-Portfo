@@ -31,6 +31,7 @@
     --SectionColor: #F5EFFF;
 
     --FontColor: #222831;
+    --FontHightColor: #352F44;
     --IconColor: #282A36;
 
     --Palette-One: #222831;
@@ -40,12 +41,18 @@
 }
 
 .dark {
-    --BodyColor: #352F44;
+    --Palette-One: #313131;
+    --Palette-Sec: #414141;
+    --Palette-Thi: #525252;
+    --Palette-Fou: #BB2525;
+
+    --BodyColor: #313131;
     --RootColor: #B9B4C71F;
     --SectionColor: #B9B4C72A;
 
     --FontColor: #FAF0E6;
-    --IconColor: #FAF0E6;
+    --FontHightColor: #FFF4EA;
+    --FontHColor: #FFF4EA;
 }
 
 body::-webkit-scrollbar {

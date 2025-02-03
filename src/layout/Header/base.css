@@ -166,7 +166,7 @@ header .Subtitle picture img {
 
 @media only screen and (max-width: 960px) {
     header {
-        height: auto;
+        height: 100vh;
         flex-flow: row wrap;
     }
 
