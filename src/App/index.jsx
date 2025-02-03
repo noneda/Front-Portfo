@@ -2,7 +2,7 @@ import "./base.css";
 const App = () => {
   return (
     <div className="App">
-      <div className="Section">
+      <div className="Section AboutMe">
         <div className="head">
           <h2>
             <b>About Me</b>
@@ -26,9 +26,7 @@ const App = () => {
         </p>
       </div>
       <div className="Section">
-        <div className="head">
-          <h2>Education 🎓📚</h2>
-        </div>
+        <h2>Education 🎓📚</h2>
         <p>
           <b>Universitaria de Colombia 🖥️</b> - Bogotá, Colombia <br />
           Bachelor's in Software Engineering <br />
