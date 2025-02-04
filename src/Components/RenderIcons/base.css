@@ -1,0 +1,50 @@
+.icon-container {
+	position: relative;
+	display: inline-block;
+}
+
+.icon-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icons {
+	width: 32px;
+	height: 32px;
+	color: currentColor;
+	color: var(--IconColor);
+	transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.icon-button:hover .icons {
+	transform: scale(1.25);
+	color: var(--ChangeColor);
+}
+
+.tooltip {
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--SectionColor);
+	color: var(--IconColor);
+	padding: 8px 16px;
+	border-radius: 22px;
+	font-size: 14px;
+	font-weight: bold;
+	box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.15);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	pointer-events: none;
+	white-space: nowrap;
+}
+
+.icon-container:hover .tooltip {
+	opacity: 1;
+	transform: translateX(-50%) scale(1);
+}
