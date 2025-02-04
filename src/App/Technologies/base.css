@@ -1,3 +1,7 @@
 .Technologies {
 	grid-area: 2 / 1 / 3 / 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
 }
