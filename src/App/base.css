@@ -55,36 +55,6 @@
 
 }
 
-.AboutMe {
-	grid-area: 1 / 1 / 2 / 3;
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: center;
-	align-self: center;
-}
-
-.AboutMe .head {
-	width: auto;
-	height: auto;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.AboutMe .head picture img {
-	border-radius: 50%;
-	height: 200px;
-}
-
-.Education {
-	grid-area: 1 / 3 / 3 / 4;
-}
-
-.Technologies {
-	grid-area: 2 / 1 / 3 / 3;
-}
-
 
 @media only screen and (max-width: 960px) {
 	.App {
@@ -106,9 +76,6 @@
 }
 
 @media only screen and (max-width: 430px) {
-	.AboutMe .head picture img {
-		height: 75px;
-	}
 
 	.Section h2 {
 		font-size: 40px;

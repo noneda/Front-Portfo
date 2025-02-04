@@ -1,0 +1,27 @@
+.AboutMe {
+	grid-area: 1 / 1 / 2 / 3;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-self: center;
+}
+
+.AboutMe .head {
+	width: auto;
+	height: auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.AboutMe .head picture img {
+	border-radius: 50%;
+	height: 200px;
+}
+
+@media only screen and (max-width: 430px) {
+	.AboutMe .head picture img {
+		height: 75px;
+	}
+}
