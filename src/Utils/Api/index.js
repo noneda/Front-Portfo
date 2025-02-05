@@ -123,9 +123,16 @@ const TechnologiesData = [
 
 const Languages = {
   Spanish: {
-    AboutMe: "",
-    Education: "",
-    HeaderSubtitle: "",
+    Spanish: {
+      AboutMe:
+        "¡Hola! Soy <b>Juan David Pardo Forero</b> 👨‍💻, estudiante de Ingeniería de Software 🎓 en Bogotá, Colombia. <br /> Apasionado por el desarrollo web 🌐, la ciberseguridad 🔒 y la programación de bajo nivel ⚙️. <br /> Disfruto resolver desafíos 🧩, aprender nuevas tecnologías 📚 y optimizar sistemas 🚀. <br /> Busco una pasantía 💼 para aplicar mis conocimientos y crecer en un entorno profesional 🏢. <br /> Creo que la tecnología no tiene límites, solo los 🚧 que impone nuestra creatividad 🎨 y nuestra capacidad de resolver problemas 🧠.",
+
+      Education:
+        "<h2>Educación 🎓</h2><p><b>Universitaria de Colombia 🖥️</b> - Bogotá, Colombia <br />Ingeniería de Software <br />Graduación esperada: 2026 🎓 </p><br /><ul><li>Enfoque en desarrollo de software 💻, algoritmos 🧩, estructuras de datos 📊 y arquitectura de sistemas 🏗️.</li><li>Aprendiendo activamente tecnologías como React ⚛️, Python 🐍, C++ 🖥️ y Deep Learning 🤖.</li></ul><br /><p><b>SENA</b> - Mosquera, Colombia <br />Técnico en Programación de Software 🖥️<br />Graduado: 2021 🎓</p><ul><li>Sólida base en programación de software 📝, resolución de problemas 🔍 y diseño de sistemas 🏗️.</li></ul><br /><p><b>Educación Secundaria</b> - Cota, Cundinamarca <br />Colombia Graduado: 2021 🎓</p><ul><li>Base sólida en matemáticas ➗, programación 👨‍💻 y resolución de problemas 🧠.</li></ul>",
+
+      HeaderSubtitle:
+        "💻 <b>Estudiante de Ingeniería de Software</b> <br /> 🚀 Apasionado por el Desarrollo Web <br /> 📚 Aprendiz continuo en busca de una <b>pasantía</b> donde pueda <b>aplicar y expandir</b> mis habilidades en un entorno profesional. <br /> ⚡ Entusiasta de los <b>nuevos desafíos</b> y <b>adaptándome a tecnologías emergentes</b>, siempre con una <b>mentalidad proactiva y orientada a soluciones</b>.",
+    },
   },
 
   English: {
