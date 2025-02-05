@@ -25,7 +25,7 @@ const Header = () => {
         </div>
         <div className="Subtitle">
           <picture className="Profile">
-            <img src="/ewrwfsgaghaha.jpeg" alt="a" />
+            <img src="/ewrwfsgaghaha.jpeg" alt="Picture for 'Cat'" />
           </picture>
           <p className="delius-regular">
             💻 <b>Software Engineering Student</b> <br /> 🚀 Passion for Web

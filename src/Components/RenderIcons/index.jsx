@@ -25,7 +25,7 @@ const RenderIcons = (props) => {
 
   return (
     <div className="icon-container" style={{ "--ChangeColor": props.color }}>
-      <button className="icon-button">
+      <button id={props.name} aria-label={props.name} className="icon-button">
         <IconComponent className="icons" />
       </button>
       <span className="tooltip">{props.name}</span>

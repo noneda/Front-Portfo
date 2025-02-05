@@ -9,7 +9,7 @@ const AboutMe = () => {
             <b>About Me</b>
           </h2>
           <picture>
-            <img src="/Me.jpeg" />
+            <img src="/Me.jpeg" alt="Picture for 'Me'" />
           </picture>
         </div>
         <p>
