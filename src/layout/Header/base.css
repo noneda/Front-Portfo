@@ -134,7 +134,7 @@ header .Subtitle picture img {
 
 .little {
     width: 100%;
-    height: auto;
+    height: 22.5vh;
     background-color: var(--Palette-One);
 
     display: flex;
@@ -195,6 +195,35 @@ header .Subtitle picture img {
     width: 125px;
 }
 
+
+@keyframes LittleHeaderImg {
+    from {
+        transform: scale(1.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes LittleHeader {
+    from {
+        height: 66vh;
+    }
+
+    to {
+        height: 22.5vh;
+    }
+}
+
+.little {
+    animation: LittleHeader 0.5s ease forwards;
+}
+
+.little .Subtitle picture img {
+    animation: LittleHeaderImg 1s ease forwards;
+}
+
 @media only screen and (max-width: 1400px) {
     header .title h1 b {
         font-size: 130px;
@@ -218,8 +247,32 @@ header .Subtitle picture img {
         }
     }
 
+    @keyframes BiggerHeader {
+        from {
+            transform: translateY(-90%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
     .bigger {
         animation: BiggerHeader 1s ease forwards;
+    }
+
+    @keyframes LittleHeader {
+        from {
+            height: 100vh;
+        }
+
+        to {
+            height: 15vh;
+        }
+    }
+
+    .little {
+        animation: LittleHeader 1s ease forwards;
     }
 
     header {
@@ -245,7 +298,7 @@ header .Subtitle picture img {
     }
 
     .little {
-        height: auto;
+        height: 15vh;
         justify-content: space-around;
     }
 

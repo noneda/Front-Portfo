@@ -1,25 +1,43 @@
 import "./base.css";
 import _ from "lodash";
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 
 const Header = () => {
-  let animateHeader = _.throttle(() => {
-    let scrollPosition = Math.ceil(window.scrollY);
-    if (scrollPosition > 0.1) {
-      document.querySelector("header").classList.remove("bigger");
-      document.querySelector("header").classList.add("little");
-    } else {
-      document.querySelector("header").classList.remove("little");
-      document.querySelector("header").classList.add("bigger");
-    }
-  }, 300);
+  const headerRef = useRef(null);
+
+  const animateHeader = useCallback(
+    _.throttle(() => {
+      if (!headerRef.current) return;
+
+      let scrollPosition = window.scrollY;
+      console.log(scrollPosition);
+      if (scrollPosition === 0) {
+        console.log("bigger");
+        headerRef.current.classList.add("bigger");
+        headerRef.current.classList.remove("little");
+        return;
+      }
+      if (scrollPosition >= 1) {
+        console.log("little");
+        headerRef.current.classList.add("little");
+        headerRef.current.classList.remove("bigger");
+        return;
+      }
+    }, [headerRef]),
+    []
+  );
+
   useEffect(() => {
     window.addEventListener("scroll", animateHeader);
-  }, []);
+
+    return () => {
+      window.removeEventListener("scroll", animateHeader);
+    };
+  }, [animateHeader]);
 
   return (
     <>
-      <header className="bigger">
+      <header ref={headerRef} className="bigger">
         <div className="title">
           <h1 className="barrio-regular">
             <b>Noneda´s</b> <p className="barrio-regular">Developer</p>
