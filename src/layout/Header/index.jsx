@@ -6,9 +6,11 @@ const Header = () => {
   let animateHeader = _.throttle(() => {
     let scrollPosition = Math.ceil(window.scrollY);
     if (scrollPosition > 0.1) {
+      document.querySelector("header").classList.remove("bigger");
       document.querySelector("header").classList.add("little");
     } else {
       document.querySelector("header").classList.remove("little");
+      document.querySelector("header").classList.add("bigger");
     }
   }, 300);
   useEffect(() => {
@@ -17,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <header className="bigger">
         <div className="title">
           <h1 className="barrio-regular">
             <b>Noneda´s</b> <p className="barrio-regular">Developer</p>

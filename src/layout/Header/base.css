@@ -73,20 +73,64 @@ header .Subtitle p {
 header .Subtitle picture img {
     border-radius: 50%;
     width: 300px;
+    height: 300px;
 }
 
-@keyframes slideIn {
+@keyframes BiggerHeaderH1 {
     from {
-        transform: translateY(-100%);
+        transform: translateX(-40%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes BiggerHeaderImg {
+    from {
+        transform: scale(0.75);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes BiggerHeaderSubtitleP {
+    from {
         opacity: 0;
     }
 
     to {
-        transform: translateY(0);
         opacity: 1;
     }
 }
 
+@keyframes BiggerHeader {
+    from {
+        transform: translateY(-80%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bigger {
+    animation: BiggerHeader 0.2s ease forwards;
+}
+
+.bigger .Subtitle picture img {
+    animation: BiggerHeaderImg 1s ease forwards;
+}
+
+.bigger .title h1 {
+    animation: BiggerHeaderH1 0.8s ease forwards;
+}
+
+.bigger .Subtitle p {
+    animation: BiggerHeaderSubtitleP 3s ease forwards;
+}
 
 .little {
     width: 100%;
@@ -98,8 +142,6 @@ header .Subtitle picture img {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-
-    animation: slideIn 0.5s ease-in-out forwards;
 
 }
 
@@ -149,6 +191,7 @@ header .Subtitle picture img {
 
 .little .Subtitle picture img {
     border-radius: 50%;
+    height: 125px;
     width: 125px;
 }
 
@@ -165,6 +208,20 @@ header .Subtitle picture img {
 }
 
 @media only screen and (max-width: 960px) {
+    @keyframes BiggerHeaderH1 {
+        from {
+            transform: translateY(-40%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .bigger {
+        animation: BiggerHeader 1s ease forwards;
+    }
+
     header {
         height: 100vh;
         flex-flow: row wrap;
@@ -187,22 +244,9 @@ header .Subtitle picture img {
 
     }
 
-    @keyframes slideInMobile {
-        from {
-            transform: translateY(-50%);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
     .little {
         height: auto;
         justify-content: space-around;
-        animation: slideInMobile 0.5s ease-in-out forwards;
     }
 
     .little .title {
@@ -235,6 +279,7 @@ header .Subtitle picture img {
     .little .Subtitle picture img {
         border-radius: 50%;
         width: 100px;
+        height: 100px;
     }
 }
 
@@ -281,22 +326,10 @@ header .Subtitle picture img {
     header .Subtitle picture img {
         border-radius: 50%;
         width: 200px;
-    }
-
-    @keyframes slideInSmall {
-        from {
-            transform: translateY(-30%);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        height: 200px;
     }
 
     .little {
-        animation: slideInSmall 0.5s ease-in-out forwards;
         height: auto;
         justify-content: space-around;
     }
@@ -331,5 +364,6 @@ header .Subtitle picture img {
     .little .Subtitle picture img {
         border-radius: 50%;
         width: 100px;
+        height: 100px;
     }
 }
