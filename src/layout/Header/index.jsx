@@ -1,8 +1,9 @@
 import "./base.css";
 import _ from "lodash";
 import { useEffect, useRef, useCallback } from "react";
+import HTMLReactParser from "html-react-parser/lib/index";
 
-const Header = () => {
+const Header = ({ data }) => {
   const headerRef = useRef(null);
 
   const animateHeader = useCallback(
@@ -47,14 +48,7 @@ const Header = () => {
           <picture className="Profile">
             <img src="/ewrwfsgaghaha.jpeg" alt="Picture for 'Cat'" />
           </picture>
-          <p className="delius-regular">
-            💻 <b>Software Engineering Student</b> <br /> 🚀 Passion for Web
-            Development <br /> 📚 Continuous Learner Looking for an{" "}
-            <b>internship</b> where I can <b>apply & expand</b> my skills in a
-            professional environment. <br /> ⚡ Enthusiastic about{" "}
-            <b>new challenges</b> and <b>adapting to emerging technologies</b>,
-            always bringing a<b>proactive & solution-driven</b> mindset.
-          </p>
+          <p className="delius-regular">{HTMLReactParser(data)}</p>
         </div>
       </header>
     </>
