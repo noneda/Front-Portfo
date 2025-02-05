@@ -11,15 +11,12 @@ const Header = ({ data }) => {
       if (!headerRef.current) return;
 
       let scrollPosition = window.scrollY;
-      console.log(scrollPosition);
       if (scrollPosition === 0) {
-        console.log("bigger");
         headerRef.current.classList.add("bigger");
         headerRef.current.classList.remove("little");
         return;
       }
       if (scrollPosition >= 1) {
-        console.log("little");
         headerRef.current.classList.add("little");
         headerRef.current.classList.remove("bigger");
         return;

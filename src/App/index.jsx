@@ -7,13 +7,13 @@ import { useOutletContext } from "react-router-dom";
 import "./base.css";
 
 const App = () => {
-  const [AboutMe, Education] = useOutletContext();
+  const [dataAboutMe, dataEducation, dataTechnologies] = useOutletContext();
   return (
     <>
       <div className="App">
-        <AboutMe data={AboutMe} />
-        <Education data={Education} />
-        <Technologies />
+        <AboutMe data={dataAboutMe} />
+        <Education data={dataEducation} />
+        <Technologies data={dataTechnologies} />
       </div>
     </>
   );
