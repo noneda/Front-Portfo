@@ -12,9 +12,9 @@ import TranslateFixedButton from "../Components/ButtonTranslante";
 const Layout = () => {
   const location = useLocation();
   const isLoading = location.state?.loading;
-  const HeaderSubtitle = Languages.English.HeaderSubtitle;
-  const dataAboutMe = Languages.English.AboutMe;
-  const dataEducation = Languages.English.Education;
+  const HeaderSubtitle = Languages.Spanish.HeaderSubtitle;
+  const dataAboutMe = Languages.Spanish.AboutMe;
+  const dataEducation = Languages.Spanish.Education;
   const dataTechnologies = TechnologiesData;
   return (
     <>

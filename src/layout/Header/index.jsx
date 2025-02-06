@@ -1,29 +1,51 @@
 import "./base.css";
-import _ from "lodash";
 import { useEffect, useRef, useCallback } from "react";
 import HTMLReactParser from "html-react-parser/lib/index";
 
 const Header = ({ data }) => {
+  let scrollPosition = 0;
   const headerRef = useRef(null);
+  const timer = useRef(null);
+  const OldScroll = useRef(null);
 
-  const animateHeader = useCallback(
-    _.throttle(() => {
-      if (!headerRef.current) return;
+  const animateHeader = useCallback(() => {
+    scrollPosition = window.scrollY;
 
-      let scrollPosition = window.scrollY;
-      if (scrollPosition === 0) {
+    console.log(
+      "scrollPosition : %d \n OldScroll : %d \n",
+      scrollPosition,
+      OldScroll.current
+    );
+
+    if (scrollPosition === 0) {
+      console.log("Can be Bigger");
+      timer.current = true;
+    }
+    if (scrollPosition === 0 && OldScroll.current >= 10) {
+      console.log("This can´t be Bigger");
+      timer.current = false;
+    }
+
+    if (scrollPosition > 1) {
+      headerRef.current.classList.add("little");
+      headerRef.current.classList.remove("bigger");
+      OldScroll.current = scrollPosition;
+      console.log("Smaller");
+      timer.current = false;
+      return;
+    }
+
+    if (timer.current) {
+      console.log("Bigger...");
+      setTimeout(() => {
         headerRef.current.classList.add("bigger");
         headerRef.current.classList.remove("little");
-        return;
-      }
-      if (scrollPosition >= 1) {
-        headerRef.current.classList.add("little");
-        headerRef.current.classList.remove("bigger");
-        return;
-      }
-    }, [headerRef]),
-    []
-  );
+        OldScroll.current = scrollPosition;
+        console.log("Bigger");
+      }, 300);
+      return;
+    }
+  }, [headerRef]);
 
   useEffect(() => {
     window.addEventListener("scroll", animateHeader);
