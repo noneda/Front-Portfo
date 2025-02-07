@@ -46,7 +46,7 @@ const Header = ({ data }) => {
         headerRef.current.classList.remove("little");
         OldScroll.current = scrollPosition;
         console.log("Bigger");
-      }, 500);
+      }, 1000);
       return;
     }
   }, [headerRef]);
