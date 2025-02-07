@@ -4,7 +4,10 @@ import ConvertStringToReact from "../../Components/Parser";
 const Education = ({ data }) => {
   return (
     <>
-      <div className="Section Education">{ConvertStringToReact(data)}</div>
+      <div className="Section Education">
+        <h2>Education 🎓</h2>
+        {ConvertStringToReact(data)}
+      </div>
     </>
   );
 };

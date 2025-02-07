@@ -21,7 +21,11 @@ const Header = ({ data }) => {
       console.log("Can be Bigger");
       timer.current = true;
     }
-    if (scrollPosition === 0 && OldScroll.current >= 10) {
+    if (
+      scrollPosition === 0 &&
+      OldScroll.current >= 10 &&
+      OldScroll.current <= 5
+    ) {
       console.log("This can´t be Bigger");
       timer.current = false;
     }
@@ -42,7 +46,7 @@ const Header = ({ data }) => {
         headerRef.current.classList.remove("little");
         OldScroll.current = scrollPosition;
         console.log("Bigger");
-      }, 300);
+      }, 500);
       return;
     }
   }, [headerRef]);
