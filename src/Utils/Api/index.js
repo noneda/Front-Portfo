@@ -107,11 +107,13 @@ const TechnologiesData = [
         icon: "SiAssemblyscript",
         color: "#007AAC",
       },
+      /* 
       {
         name: "Deep Learning",
         icon: "SiTensorflow",
         color: "#FF6F00",
       },
+      */
       {
         name: "Open Source Contributions",
         icon: "SiOpensourceinitiative",
