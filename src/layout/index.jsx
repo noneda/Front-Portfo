@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Loader from "../Components/Loader";
 
 import { Languages, TechnologiesData } from "../Utils/Api";
-import TranslateFixedButton from "../Components/ButtonTranslante";
+import TranslateFixedButton from "../Components/ButtonTranslate";
 
 // * Export ... Views? O don´t know how name those
 
