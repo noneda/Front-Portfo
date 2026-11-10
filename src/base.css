@@ -1,70 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Delius&family=Modak&family=Tiny5&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "tailwindcss";
 
-.tiny5-regular {
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+/* 
+@theme {
 
-.modak-regular {
-    font-family: "Modak", serif;
-    font-weight: 400;
-    font-style: normal;
-}
+} */
 
-.delius-regular {
-    font-family: "Delius", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.barrio-regular {
-    font-family: "Barrio", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-:root {
-    --BodyColor: #F5EFFF;
-    --RootColor: #B9B4C71F;
-    --SectionColor: #F5EFFF;
-
-    --FontColor: #222831;
-    --FontHightColor: #352F44;
-    --IconColor: #282A36;
-
-    --Palette-One: #222831;
-    --Palette-Sec: #31363F;
-    --Palette-Thi: #76ABAE;
-    --Palette-Fou: #EEEEEE;
-}
-
-.dark {
-    --Palette-One: #313131;
-    --Palette-Sec: #414141;
-    --Palette-Thi: #525252;
-    --Palette-Fou: #BB2525;
-
-    --BodyColor: #313131;
-    --RootColor: #B9B4C71F;
-    --SectionColor: #B9B4C72A;
-
-    --FontColor: #FAF0E6;
-    --FontHightColor: #FFF4EA;
-    --IconColor: #FFF4EA;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    background-color: var(--BodyColor);
-    margin: 0;
-    padding: 0;
-}
-
-#root {
-    background-color: var(--RootColor);
-}
+/* @layer components {
+  
+} */
