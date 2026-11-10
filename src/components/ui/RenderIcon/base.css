@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+@layer components {
+  .icon-container {
+    @apply group relative inline-flex;
+  }
+
+  .icon-container > .icon-button {
+    @apply cursor-pointer rounded-md p-1 outline-none
+           focus-visible:ring-2 focus-visible:ring-(--ChangeColor);
+  }
+
+  .icon-container > .icon-button > .icons {
+    @apply transition duration-200
+           group-hover:scale-125 group-hover:text-(--ChangeColor)
+           group-focus-within:text-(--ChangeColor);
+  }
+
+  .icon-container > .tooltip {
+    @apply pointer-events-none absolute -top-12 left-1/2 z-20
+           -translate-x-1/2 origin-bottom scale-0 whitespace-nowrap
+           rounded-lg border border-gray-300 bg-white px-3 py-2
+           text-sm font-bold shadow-md
+           transition-all duration-300 ease-in-out
+           group-hover:scale-100 group-focus-within:scale-100;
+  }
+}

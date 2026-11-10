@@ -1,22 +1,15 @@
-import AboutMe from "./AboutMe";
-import Education from "./Education";
-import Technologies from "./Technologies";
+import { StrictMode } from "react";
+import { RouterProvider } from "react-router-dom";
 
-import { useOutletContext } from "react-router-dom";
+import LanguageProvider from "@/contexts/Language";
+import Router from "@/app/router";
 
-import "./base.css";
-
-const App = () => {
-  const [dataAboutMe, dataEducation, dataTechnologies] = useOutletContext();
-  return (
-    <>
-      <div className="App">
-        <AboutMe data={dataAboutMe} />
-        <Education data={dataEducation} />
-        <Technologies data={dataTechnologies} />
-      </div>
-    </>
-  );
-};
+const App = () => (
+  <StrictMode>
+    <LanguageProvider>
+      <RouterProvider router={Router} />
+    </LanguageProvider>
+  </StrictMode>
+);
 
 export default App;

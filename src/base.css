@@ -1,70 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Delius&family=Modak&family=Tiny5&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+/* Fuentes servidas desde el propio sitio */
+@import "@fontsource/permanent-marker";
+@import "@fontsource/archivo-black";
+@import "@fontsource-variable/dm-sans";
+@import "tailwindcss";
 
-.tiny5-regular {
-    font-family: "Tiny5", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* ============ Tema del proyecto ============ */
+@theme {
+  /* Los nombres son ROLES, no colores: ink = fondo oscuro, lime = acento, cream = fondo claro */
+  --color-ink: #1f2430; /* azul noche (fondo del hero) */
+  --color-ink-soft: #272d3a; /* tarjetas sobre fondo oscuro */
+  --color-ink-line: #363d4c; /* bordes sobre fondo oscuro */
+  --color-lime: #c9b6f2; /* acento lavanda */
+  --color-lime-dark: #a78bdf;
+  --color-cream: #f5f1fb; /* fondo claro lavanda */
+  --color-cream-dark: #e9e2f4; /* tarjetas sobre fondo claro */
+  --color-stone: #6e6884; /* texto secundario */
+
+  /* Fuentes: generan font-brush, font-display, font-sans */
+  --font-brush: "Permanent Marker", cursive;
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
 }
 
-.modak-regular {
-    font-family: "Modak", serif;
-    font-weight: 400;
-    font-style: normal;
+/* ============ Utilidades propias ============ */
+
+/* Etiqueta pequeña en mayúsculas: "SOFTWARE × WEB × SECURITY" */
+@utility label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
-.delius-regular {
-    font-family: "Delius", serif;
-    font-weight: 400;
-    font-style: normal;
+/* Brillo suave en textos sobre fondo oscuro */
+@utility glow {
+  text-shadow:
+    0 0 2px rgb(255 255 255 / 0.8),
+    0 0 10px rgb(186 220 255 / 0.5);
 }
 
-.barrio-regular {
-    font-family: "Barrio", serif;
-    font-weight: 400;
-    font-style: normal;
+/* Contenedor estándar de las secciones */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
 }
 
-:root {
-    --BodyColor: #F5EFFF;
-    --RootColor: #B9B4C71F;
-    --SectionColor: #F5EFFF;
+/* ============ Base ============ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* compensa el navbar fijo al navegar con #anclas */
+  }
 
-    --FontColor: #222831;
-    --FontHightColor: #352F44;
-    --IconColor: #282A36;
+  body {
+    @apply bg-ink font-sans text-white antialiased;
+  }
 
-    --Palette-One: #222831;
-    --Palette-Sec: #31363F;
-    --Palette-Thi: #76ABAE;
-    --Palette-Fou: #EEEEEE;
-}
+  ::selection {
+    @apply bg-lime text-ink;
+  }
 
-.dark {
-    --Palette-One: #313131;
-    --Palette-Sec: #414141;
-    --Palette-Thi: #525252;
-    --Palette-Fou: #BB2525;
-
-    --BodyColor: #313131;
-    --RootColor: #B9B4C71F;
-    --SectionColor: #B9B4C72A;
-
-    --FontColor: #FAF0E6;
-    --FontHightColor: #FFF4EA;
-    --IconColor: #FFF4EA;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-body {
-    background-color: var(--BodyColor);
-    margin: 0;
-    padding: 0;
-}
-
-#root {
-    background-color: var(--RootColor);
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
