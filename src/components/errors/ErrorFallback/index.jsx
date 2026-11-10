@@ -1,13 +1,13 @@
 const ErrorFallback = ({ name = "Esta sección", onRetry }) => (
   <div
     role="alert"
-    className="rounded-lg border border-red-200 bg-red-50 p-6 text-center"
+    className="mx-auto my-10 max-w-md border-2 border-ink bg-lime p-6 text-center text-ink"
   >
-    <p className="font-bold text-red-800">{name} no se pudo cargar.</p>
+    <p className="font-display uppercase">{name} no se pudo cargar.</p>
     {onRetry && (
       <button
         onClick={onRetry}
-        className="mt-3 rounded-lg border border-red-300 px-4 py-1 text-red-800"
+        className="mt-4 border-2 border-ink px-4 py-1 text-sm font-bold uppercase hover:bg-ink hover:text-lime"
       >
         Reintentar
       </button>

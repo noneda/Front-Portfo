@@ -60,8 +60,7 @@ export const useLanguageState = () => {
     [lang],
   );
 
-  // pick({ es: "Hola", en: "Hi" }) -> "Hola" | "Hi"
-  // Si recibe un string normal, lo devuelve tal cual.
+  // pick({ es: "Hola", en: "Hi" }) -> "Hola" | "Hi". Si recibe un string, lo devuelve tal cual.
   const pick = useCallback(
     (value) =>
       value && typeof value === "object"

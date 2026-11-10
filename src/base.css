@@ -1,10 +1,74 @@
+/* Fuentes servidas desde el propio sitio */
+@import "@fontsource/permanent-marker";
+@import "@fontsource/archivo-black";
+@import "@fontsource-variable/dm-sans";
 @import "tailwindcss";
 
-/* 
+/* ============ Tema del proyecto ============ */
 @theme {
+  /* Los nombres son ROLES, no colores: ink = fondo oscuro, lime = acento, cream = fondo claro */
+  --color-ink: #1f2430; /* azul noche (fondo del hero) */
+  --color-ink-soft: #272d3a; /* tarjetas sobre fondo oscuro */
+  --color-ink-line: #363d4c; /* bordes sobre fondo oscuro */
+  --color-lime: #c9b6f2; /* acento lavanda */
+  --color-lime-dark: #a78bdf;
+  --color-cream: #f5f1fb; /* fondo claro lavanda */
+  --color-cream-dark: #e9e2f4; /* tarjetas sobre fondo claro */
+  --color-stone: #6e6884; /* texto secundario */
 
-} */
+  /* Fuentes: generan font-brush, font-display, font-sans */
+  --font-brush: "Permanent Marker", cursive;
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+}
 
-/* @layer components {
-  
-} */
+/* ============ Utilidades propias ============ */
+
+/* Etiqueta pequeña en mayúsculas: "SOFTWARE × WEB × SECURITY" */
+@utility label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Brillo suave en textos sobre fondo oscuro */
+@utility glow {
+  text-shadow:
+    0 0 2px rgb(255 255 255 / 0.8),
+    0 0 10px rgb(186 220 255 / 0.5);
+}
+
+/* Contenedor estándar de las secciones */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ============ Base ============ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* compensa el navbar fijo al navegar con #anclas */
+  }
+
+  body {
+    @apply bg-ink font-sans text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-lime text-ink;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

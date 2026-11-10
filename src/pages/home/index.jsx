@@ -1,20 +1,20 @@
-import AboutMe from "@/features/AboutMe";
-import Education from "@/features/Education";
+import Navbar from "@/features/Navbar";
+import Hero from "@/features/Hero";
 import Technologies from "@/features/Technologies";
 import Projects from "@/features/Projects";
+import AboutMe from "@/features/AboutMe";
+import Education from "@/features/Education";
 import SocialMedia from "@/features/SocialMedia";
 
 import ErrorBoundary from "@/components/errors/ErrorBoundary";
-import LanguageToggle from "@/components/ui/LanguageToggle";
-
 import { useHomeHook } from "./hook";
 
+// Secciones que se deslizan ENCIMA del hero (en orden)
 const SECTIONS = [
-  { name: "AboutMe", Component: AboutMe },
-  { name: "Education", Component: Education },
   { name: "Technologies", Component: Technologies },
   { name: "Projects", Component: Projects },
-  { name: "SocialMedia", Component: SocialMedia },
+  { name: "AboutMe", Component: AboutMe },
+  { name: "Education", Component: Education },
 ];
 
 const Home = () => {
@@ -22,16 +22,28 @@ const Home = () => {
 
   return (
     <>
-      <header className="flex justify-end p-4">
-        <LanguageToggle />
-      </header>
+      <ErrorBoundary name="Navbar">
+        <Navbar />
+      </ErrorBoundary>
 
       <main>
-        {SECTIONS.map(({ name, Component }) => (
-          <ErrorBoundary key={name} name={name}>
-            <Component />
+        {/* El hero se queda fijo mientras el resto pasa por encima */}
+        <ErrorBoundary name="Hero">
+          <Hero />
+        </ErrorBoundary>
+
+        {/* relative z-10: todo lo que sigue queda siempre por encima del hero */}
+        <div className="relative z-10">
+          {SECTIONS.map(({ name, Component }) => (
+            <ErrorBoundary key={name} name={name}>
+              <Component />
+            </ErrorBoundary>
+          ))}
+
+          <ErrorBoundary name="SocialMedia">
+            <SocialMedia />
           </ErrorBoundary>
-        ))}
+        </div>
       </main>
     </>
   );
